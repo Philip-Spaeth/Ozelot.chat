@@ -1,0 +1,76 @@
+/* frontend/styles/globals.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  li p {
+    margin: 0 0 10px 0;
+  }
+  
+  button {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  .entry-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .entry-item-buttons {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .entry-item-date {
+    text-align: right;
+    color: #8f8f8f;
+  }
