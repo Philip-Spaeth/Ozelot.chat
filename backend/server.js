@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const { sequelize, connectDB } = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const messageRoutes = require('./routes/messageRoutes');
+const userRoutes = require('./routes/userRoutes'); // Hinzugefügt
 
 const app = express();
 dotenv.config();

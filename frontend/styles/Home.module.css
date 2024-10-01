@@ -1,0 +1,12 @@
+/* frontend/styles/Home.module.css */
+
+.container {
+    display: flex;
+    height: 80vh; /* Volle Höhe des Ansichtsfensters */
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0%;
+    padding-right: 0%;
+    
+  }
+  

@@ -1,11 +1,7 @@
 /* frontend/components/MessageList.module.css */
 
 .messageList {
-    flex: 1;
-    padding: 1rem;
-    border-bottom: 4.5rem solid #ffffff;
-  }
-  
-  .noMessages {
-    text-align: center;
-  }
+  flex: 1;
+  padding: 1rem;
+  border-bottom: 0rem solid #ffffff;
+}

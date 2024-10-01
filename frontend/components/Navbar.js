@@ -22,19 +22,21 @@ const Navbar = () => {
         <Link href="/" className={styles.logo}>
           Ozelot.chat
         </Link>
-        <div className={styles.navLinks}>
-          {/* Weitere Links können hier hinzugefügt werden */}
-          {/* Beispiel:
-          <Link href="/about" className={styles.link}>
-            Über uns
-          </Link>
-          */}
-        </div>
       </div>
       <div className={styles.navRight}>
+        {/* Links, die rechts neben dem Logout-Button angezeigt werden */}
+        <div className={styles.navLinks}>
+          {/* Beispielhafte Links, ersetze sie nach Bedarf */}
+          <Link href="/aout" className={styles.link}>
+            about
+          </Link>
+          <Link href="/settings" className={styles.link}>
+            settings
+          </Link>
+        </div>
         {user && !excludedPages.includes(pathname) && (
           <button className={styles.logoutButton} onClick={handleLogout}>
-            log out
+            Log out
           </button>
         )}
       </div>

@@ -10,8 +10,9 @@ const ChatRoom = () => {
 
   return (
     <div className={styles.chatRoom}>
-      <h2 className={styles.heading}>Chat Room</h2>
-      <MessageList />
+      <div className={styles.messageContainer}>
+        <MessageList />
+      </div>
       <MessageInput />
     </div>
   );

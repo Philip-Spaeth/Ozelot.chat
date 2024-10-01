@@ -1,0 +1,96 @@
+/* frontend/styles/settings.module.css */
+.settingsContainer {
+    padding: 20px;
+    height: 100vh; /* Volle Höhe für Konsistenz */
+    overflow-y: auto;
+    background-color: #f9f9f9;
+  }
+  
+  .settingsContainer h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .settingsForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .formGroup input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: #1890ff;
+  }
+  
+  .updateButton {
+    padding: 10px 20px;
+    background-color: #1890ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .updateButton:hover {
+    background-color: #40a9ff;
+  }
+  
+  .updateButton:disabled {
+    background-color: #a0cfff;
+    cursor: not-allowed;
+  }
+  
+  .divider {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  .deleteButton {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c0392b;
+  }
+  
+  .deleteButton:disabled {
+    background-color: #f2a5a5;
+    cursor: not-allowed;
+  }
+  
+  .successMessage {
+    color: green;
+    margin-bottom: 15px;
+  }
+  
+  .errorMessage {
+    color: red;
+    margin-bottom: 15px;
+  }
+  
