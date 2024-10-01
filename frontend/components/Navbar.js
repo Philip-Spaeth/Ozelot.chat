@@ -23,9 +23,6 @@ const Navbar = () => {
           Ozelot.chat
         </Link>
         <div className={styles.navLinks}>
-          <Link href="/" className={styles.link}>
-            Home
-          </Link>
           {/* Weitere Links können hier hinzugefügt werden */}
           {/* Beispiel:
           <Link href="/about" className={styles.link}>
