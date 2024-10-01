@@ -1,11 +1,13 @@
 // frontend/pages/login.js
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link'; // Link importieren
+import Link from 'next/link';
 import styles from '../styles/auth.module.css';
+import { UserContext } from '../context/UserContext';
 
-function Login({ setUser }) {
+function Login() {
   const router = useRouter();
+  const { setUser } = useContext(UserContext);
   const [formData, setFormData] = useState({
     email: '',
     password: '',

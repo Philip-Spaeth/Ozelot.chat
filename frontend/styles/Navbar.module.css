@@ -1,0 +1,90 @@
+/* frontend/components/Navbar.module.css */
+
+.navbar {
+  font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0062d1;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 25, 168, 0.1);
+    z-index: 1000;
+  }
+  
+  .navLeft {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 2rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .navLinks {
+    margin-top: 0.3rem;
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 550;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #9fccff; /* Tomatenfarbe beim Hover */
+  }
+  
+  .navRight {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoutButton {
+    background-color: #ffffff; /* Tomatenfarbe */
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 3rem;
+    border-radius: 4px;
+    color: #353535;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: 550;
+  }
+  
+  .logoutButton:hover {
+    background-color: #9fccff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navLinks {
+      flex-direction: column;
+      width: 100%;
+      gap: 1rem;
+    }
+  
+    .logoutButton {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  

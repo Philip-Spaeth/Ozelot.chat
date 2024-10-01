@@ -1,0 +1,30 @@
+/* frontend/components/MessageItem.module.css */
+
+.messageItem {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #e6f7ff;
+  }
+  
+  .messageHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+  }
+  
+  .sender {
+    font-weight: bold;
+    color: #0050b3;
+  }
+  
+  .timestamp {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  .content {
+    margin: 0;
+    color: #333;
+  }
+  
