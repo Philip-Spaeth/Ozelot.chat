@@ -1,0 +1,88 @@
+/* Container, um das Formular zu zentrieren */
+.authContainer {
+  display: flex;
+  flex-direction: column; /* Elemente vertikal anordnen */
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Mindestens 80% der Bildschirmhöhe */
+  padding: 1rem;
+  background-color: #ffffff; /* Leichter Hintergrund */
+}
+
+/* Styling des Formulars */
+.authForm {
+  width: 100%;
+  max-width: 400px; /* Maximale Breite des Formulars */
+  padding: 2rem;
+  border: 1px solid #c6d6f5;
+  border-radius: 8px;
+  background-color: #f6f8ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Überschrift im Formular */
+.authFormHeading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Labels für die Eingabefelder */
+.authFormLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Eingabefelder */
+.authFormInput {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #525252;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Fehlermeldungen */
+.authFormMessage {
+  color: rgb(90, 90, 90);
+  text-align: center;
+}
+
+/* Absende-Button */
+.authFormButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Hover-Effekt für den Button */
+.authFormButton:hover {
+  background-color: #005bb5;
+}
+
+/* Nachricht unter dem Formular zum Wechseln zwischen Login und Registrierung */
+.switchAuth {
+  text-align: center;
+  margin-top: 1rem; /* Kann angepasst werden, z. B. 1.5rem */
+  color: #333;
+  font-size: 0.9rem;
+}
+
+
+.switchAuthLink {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.switchAuthLink:hover {
+  text-decoration: underline;
+}

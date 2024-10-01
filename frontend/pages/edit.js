@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import EntryForm from '../components/EntryForm';
 
-export default function EditEntry() {
+export default function EditEntry({ user }) {
   const router = useRouter();
   const { id } = router.query;
 
@@ -12,7 +12,11 @@ export default function EditEntry() {
 
   const fetchEntry = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/entries/${id}`);
+      const res = await fetch(`http://localhost:5000/api/entries/${id}`, {
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      });
       if (res.ok) {
         const data = await res.json();
         setEntry(data);
@@ -26,14 +30,19 @@ export default function EditEntry() {
   };
 
   useEffect(() => {
-    if (id) fetchEntry();
-  }, [id]);
+    if (id && user) {
+      fetchEntry();
+    }
+  }, [id, user]);
 
   const handleUpdate = async (formData) => {
     try {
       const res = await fetch(`http://localhost:5000/api/entries/${id}`, {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${user.token}`,
+        },
         body: JSON.stringify({
           name: formData.name,
           number: Number(formData.number),
