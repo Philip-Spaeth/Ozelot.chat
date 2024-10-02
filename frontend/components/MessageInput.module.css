@@ -36,7 +36,6 @@
   transition: background-color 0.3s ease;
   box-sizing: border-box;
   font-size: 1rem; /* Konsistente Schriftgröße */
-  margin-top: 0.5rem;
 }
 
 .button:hover {

@@ -1,33 +1,90 @@
-/* frontend/components/Sidebar.module.css */
-
+/* Sidebar */
 .sidebar {
-    width: 250px; /* Breite der Sidebar */
-    background-color:#e6f7ff; 
-    border-radius: 0.5rem;
-    color: #ffffff; /* Textfarbe */
-    padding: 20px;
-    box-sizing: border-box;
-    height: 90vh; /* Volle Höhe des Ansichtsfensters */
-    overflow-y: auto; /* Scrollen bei Überlauf */
-  }
-  
-  
-  .chatList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .chatItem {
-    padding: 1rem;
-    margin-bottom: 10px;
-    background-color: #0025cc;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .chatItem:hover {
-    background-color: #77a9ff;
-  }
-  
+  width: 250px; /* Breite der Sidebar */
+  color: #ffffff; /* Textfarbe */
+  padding: 0; /* Padding entfernen */
+  box-sizing: border-box;
+  height: 90vh; /* Volle Höhe des Ansichtsfensters */
+  overflow-y: auto; /* Scrollen bei Überlauf */
+  border: 1px solid #e1e1e1; /* Randfarbe */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Suchleiste */
+.searchBar {
+  background-color: #ffffff;
+  color: #003088d2;
+  font-weight: bold;
+  border: 1px solid #e1e1e1; /* Randfarbe */
+  border-radius: 0rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%; /* Volle Breite */
+  margin: 0; /* Kein Abstand zwischen den Chat-Items */
+  padding: 1.5rem; /* Optional: Gleichmäßiger Abstand innerhalb der Items */
+  box-sizing: border-box; /* Sorgt dafür, dass das Padding die Breite nicht beeinflusst */
+  outline: none; /* Entfernt den Standard-Umriss des Browsers */
+}
+
+/* Hover-Effekt für Suchleiste */
+.searchBar:hover {
+  background-color: #f0f6ff;
+  border-color: #b1d0ff;
+  outline: none; /* Entfernt den Standard-Umriss des Browsers */
+}
+
+/* wenn die Suchleiste aktiv ist */
+.searchBar.focus {
+  background-color: #63a2ff;
+  border-color: #b1d0ff;
+  outline: none; /* Entfernt den Standard-Umriss des Browsers */
+}
+
+/* Chat-Liste */
+.chatList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Nimmt den verbleibenden Platz ein */
+}
+
+/* Chat-Item */
+.chatItem {
+  background-color: #ffffff;
+  color: #003088d2;
+  font-weight: bold;
+  border: 1px solid #e1e1e1; /* Randfarbe */
+  border-radius: 0rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%; /* Volle Breite */
+  margin: 0; /* Kein Abstand zwischen den Chat-Items */
+  padding: 1.5rem; /* Optional: Gleichmäßiger Abstand innerhalb der Items */
+  box-sizing: border-box; /* Sorgt dafür, dass das Padding die Breite nicht beeinflusst */
+}
+
+/* Hover-Effekt für Chat-Item */
+.chatItem:hover {
+  background-color: #f0f6ff;
+}
+
+/* Aktives Chat-Item */
+.chatItem.active {
+  background-color: #b1d0ff;
+}
+
+
+.sidebar::-webkit-scrollbar {
+  width: 10px; /* Erhöhte Breite für bessere Sichtbarkeit */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+}
