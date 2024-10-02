@@ -19,14 +19,18 @@
 .navLeft {
   display: flex;
   align-items: center;
+  margin-left:1rem;
 }
+
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 2rem;
   text-decoration: none;
+  margin-top: 0.1rem;
   color: #fff;
+  margin-right: 1rem; /* Verringere den Abstand hier */
 }
 
 .navRight {
