@@ -2,10 +2,11 @@
 import { createContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { io } from 'socket.io-client';
+import { getBackendURL } from '../utils/getBackendURL';
 
 export const UserContext = createContext();
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const BACKEND_URL = getBackendURL();
 
 let socket;
 

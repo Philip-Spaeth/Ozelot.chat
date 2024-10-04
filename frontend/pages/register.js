@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styles from '../styles/auth.module.css';
 import { UserContext } from '../context/UserContext';
+import { getBackendURL } from '../utils/getBackendURL';
 
 function Register() {
   const router = useRouter();
@@ -19,7 +20,7 @@ function Register() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+  const BACKEND_URL = getBackendURL();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
