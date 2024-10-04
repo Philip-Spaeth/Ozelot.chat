@@ -5,6 +5,8 @@ import { io } from 'socket.io-client';
 
 export const UserContext = createContext();
 
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+
 let socket;
 
 export const UserProvider = ({ children }) => {
@@ -28,7 +30,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     if (user && user.token) {
       // Initialisiere Socket.io Verbindung
-      socket = io('http://localhost:5000', {
+      socket = io(BACKEND_URL, {
         auth: {
           token: user.token,
         },
@@ -54,7 +56,7 @@ export const UserProvider = ({ children }) => {
     const fetchMessages = async () => {
       if (user && user.token) {
         try {
-          const res = await fetch('http://localhost:5000/api/messages', {
+          const res = await fetch(`${BACKEND_URL}/api/messages`, {
             headers: {
               'Content-Type': 'application/json',
               Authorization: `Bearer ${user.token}`,

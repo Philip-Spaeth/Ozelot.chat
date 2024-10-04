@@ -33,7 +33,7 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:3000', // Passe dies entsprechend deinem Frontend an
+    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
     methods: ['GET', 'POST'],
   },
 });
@@ -107,8 +107,8 @@ connectDB()
     await sequelize.sync({ alter: true }); // 'alter: true' passt die Tabellen automatisch an
     console.log('Datenbank synchronisiert.');
 
-    // Starte den Server nur hier
-    server.listen(PORT, '0.0.0.0', () => {
+     // Server starten
+     server.listen(PORT, '0.0.0.0', () => {
       console.log(`Server läuft auf Port ${PORT}`);
     });
   })
