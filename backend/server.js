@@ -96,10 +96,6 @@ io.on('connection', (socket) => {
 
 // Starte den Server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server läuft auf Port ${PORT}`);
-});
-
 
 connectDB()
   .then(async () => {
@@ -111,7 +107,8 @@ connectDB()
     await sequelize.sync({ alter: true }); // 'alter: true' passt die Tabellen automatisch an
     console.log('Datenbank synchronisiert.');
 
-    server.listen(PORT, () => {
+    // Starte den Server nur hier
+    server.listen(PORT, '0.0.0.0', () => {
       console.log(`Server läuft auf Port ${PORT}`);
     });
   })
