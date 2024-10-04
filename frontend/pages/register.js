@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styles from '../styles/auth.module.css';
 import { UserContext } from '../context/UserContext';
+import { getBackendURL } from '../utils/getBackendURL';
 
 function Register() {
   const router = useRouter();
@@ -19,10 +20,12 @@ function Register() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const BACKEND_URL = getBackendURL();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:5000/api/auth/register', {
+      const res = await fetch(`${BACKEND_URL}/api/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

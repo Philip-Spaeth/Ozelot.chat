@@ -33,10 +33,11 @@ const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:3000', // Passe dies entsprechend deinem Frontend an
+    origin: '*', // Erlaube alle Origins (nur für Entwicklung)
     methods: ['GET', 'POST'],
   },
 });
+
 
 // Middleware für Socket.io Authentifizierung
 const jwt = require('jsonwebtoken');
@@ -107,7 +108,8 @@ connectDB()
     await sequelize.sync({ alter: true }); // 'alter: true' passt die Tabellen automatisch an
     console.log('Datenbank synchronisiert.');
 
-    server.listen(PORT, () => {
+     // Server starten
+     server.listen(PORT, '0.0.0.0', () => {
       console.log(`Server läuft auf Port ${PORT}`);
     });
   })
